@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Login</title>
+  <style>
+    body {
+      background-color: #fafafa;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: #fff;
+      border: 1px solid #dbdbdb;
+      padding: 40px 40px 20px;
+      width: 350px;
+      text-align: center;
+    }
+
+    .login-container img {
+      width: 175px;
+      margin-bottom: 30px;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #fafafa;
+      border: 1px solid #dbdbdb;
+      border-radius: 3px;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #0095f6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .or-line {
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .or-line::before,
+    .or-line::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background-color: #ccc;
+    }
+
+    .or-line::before {
+      left: 0;
+    }
+
+    .or-line::after {
+      right: 0;
+    }
+
+    .or-line span {
+      color: #999;
+      font-size: 14px;
+      background-color: #fff;
+      padding: 0 10px;
+    }
+
+    .forgot {
+      color: #385185;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .signup-link {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .signup-link a {
+      color: #0095f6;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram Logo">
+
+    <input type="text" class="input-field" placeholder="Phone number, username, or email">
+    <input type="password" class="input-field" placeholder="Password">
+
+    <button class="login-btn">Log In</button>
+
+    <div class="or-line"><span>OR</span></div>
+
+    <a href="#" class="forgot">Forgot password?</a>
+
+    <div class="signup-link">
+      Don’t have an account? <a href="#">Sign up</a>
+    </div>
+  </div>
+
+</body>
+</html>
