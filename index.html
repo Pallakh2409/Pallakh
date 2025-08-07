@@ -1,0 +1,35 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import java.time.Duration;
+public class FormFillingExample {
+public static void main(String[] args) {
+WebDriverManager.chromedriver().setup();
+WebDriver driver = new ChromeDriver();
+WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+try {
+// Navigate to a form page (you can replace with your own URL)
+driver.get("https://example-form-website.com");
+// Wait for name field and fill it
+WebElement nameField = wait.until(
+ExpectedConditions.presenceOfElementLocated(By.id("name"))
+);
+nameField.sendKeys("John Doe");
+// Fill email field
+WebElement emailField = driver.findElement(By.id("email"));
+emailField.sendKeys("john@example.com");
+// Click submit button
+WebElement submitButton = driver.findElement(By.className("submit-btn"));
+submitButton.click();
+System.out.println("Form filled and submitted successfully!");
+} catch (Exception e) {
+System.out.println("An error occurred: " + e.getMessage());
+} finally {
+driver.quit();
+}
+}
+}
